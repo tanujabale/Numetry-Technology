@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #d0e6ff;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left and Right Columns */
+.left-column,
+.right-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f0f8ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 25px;
+}
+
+.section h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #050505;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section ul li {
+    padding: 10px 15px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    border-left: 5px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+}
+
+.section ul li strong {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.section ul li em {
+    font-style: normal;
+    color: #666;
+}
+
+/* Contact Styles */
+.contact p {/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #000, #6ec1e4);
+    color: white;
+    padding: 20px;
+    border-bottom: 5px solid #000;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+}
+
+/* Left and Right Columns */
+.left-column,
+.right-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f0f8ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 25px;
+}
+
+.section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #000;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section h3::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section ul li {
+    padding: 10px 15px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    border-left: 5px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+}
+
+.section ul li strong {
+    color: #000;
+    font-weight: bold;
+}
+
+.section ul li em {
+    font-style: normal;
+    color: #666;
+}
+
+/* Contact Styles */
+.contact p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

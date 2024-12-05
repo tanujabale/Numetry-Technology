@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>Resume</h1>
+            <h1>Tanuja Shahaji Bale</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><button class="tab-button" data-target="contact">Contact Details</button></li>
+                <li><button class="tab-button" data-target="education">Educational Details</button></li>
+                <li><button class="tab-button" data-target="skills">Technical Skills</button></li>
+                <li><button class="tab-button" data-target="projects">Academic Projects</button></li>
+                <li><button class="tab-button" data-target="training">Training & Internship</button></li>
+                <li><button class="tab-button" data-target="personal">Personal Information</button></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="contact" class="content-section active">
+                <h2>Contact Details</h2>
+                <p><strong>Phone: </strong>7040209053</p>
+                <p><strong>Email: </strong><a href="mailto:tanujasbale@gmail.com">tanujasbale@gmail.com</a></p>
+                <p><strong>Address:</strong>Shivraj Chauka at Post Kodoli, Satara</p>
+            </section>
+            <section id="education" class="content-section">
+                <h2>Educational Details</h2>
+                <p><strong>B.Tech in Computer Science and Engineering</strong></p>
+                <p>DBATU University | 2021 - 2024</p>
+                <p><strong>Diploma in Computer Engineering</strong></p>
+                <p>MSBTE | 2019 - 2021 (89.83%)</p>
+                <p><strong>HSC (General)</strong></p>
+                <p>Kolhapur Board | 2018 - 2019 (62%)</p>
+                <p><strong>SSC (General)</strong></p>
+                <p>Kolhapur Board | 2016 - 2017 (84%)</p>
+            </section>
+            <section id="skills" class="content-section">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li><strong>FrontEnd: </strong>Java, JDBC, Hibernate, Spring, Spring Boot</li>
+                    <li><strong>BackEnd:</strong> HTML, CSS</li>
+                    <li><strong>Database: </strong>MySQL</li>
+                </ul>
+            </section>
+            <section id="projects" class="content-section">
+                <h2>Academic Projects</h2>
+                <p><strong>Sentiment Analysis on Social Media:</strong> Developed a sentiment analysis system to analyze opinions, sentiments, and emotions on social media posts using a machine learning algorithm.</p>
+                <p><strong>Flight Booking System:</strong> A web application with admin and user layers, where admins manage flights, add flights, and users can book tickets.</p>
+                <p><strong>School Management System:</strong> Developed a School Management System with Spring Boot and Thymeleaf. Features include student/faculty dashboards, library management, event calendar, attendance tracking, test submissions, and study material search.</p>
+            </section>
+            <section id="training" class="content-section">
+                <h2>Training & Internship</h2>
+                <p><strong>Java Full Stack Training:</strong> Successfully completed at KBP College of Engineering, Satara.</p>
+                <p><strong>Infosys Training:</strong> Completed two-week Infosys Campus Connect program at KBP College of Engineering.</p>
+            </section>
+            <section id="personal" class="content-section">
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong>Tanuja Shahaji Bale</p>
+                <p><strong>Gender:</strong>Female</p>
+                <p><strong>Marital Status:</strong> Unmarried</p>
+                <p><strong>Languages Known:</strong>Marathi, English, Hindi</p>
+            </section>
+        </main>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('.tab-button');
+        const sections = document.querySelectorAll('.content-section');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const target = button.getAttribute('data-target');
+
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

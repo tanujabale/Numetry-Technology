@@ -1,0 +1,195 @@
+/* Reset Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #f0f9ff, #c8d6e5); /* Light gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container for To-Do List */
+.todo-container {
+    background: #ffffff; /* White background */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateZ(0); /* For 3D perspective */
+    transition: all 0.3s ease;
+}
+
+.todo-container:hover {
+    transform: translateY(-5px) scale(1.02); /* Slight lift and grow effect */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Title Styling */
+.todo-container h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #007aff; /* Soft blue */
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Section */
+.add-task {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007aff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.4);
+}
+
+/* Add Button */
+button#add-btn {
+    background: linear-gradient(135deg, #007aff, #4facfe); /* Blue gradient */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button#add-btn:hover {
+    transform: translateY(-3px) scale(1.05); /* Hover effect */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Tasks List */
+.tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid #f0f0f0;
+    max-height: 300px; /* Scrollable list */
+    overflow-y: auto;
+}
+
+.tasks-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 8px 0;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tasks-list li:hover {
+    background: #eef4ff; /* Soft blue hover effect */
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Completed Task Style */
+.tasks-list li.completed {
+    text-decoration: line-through;
+    color: #9e9e9e; /* Light gray */
+    font-style: italic;
+    background: #f5f5f5; /* Slightly muted background for completed tasks */
+}
+
+/* Task Actions */
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #666;
+    margin-left: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.task-actions button:hover {
+    color: #333;
+    transform: scale(1.2);
+}
+
+.task-actions .delete-btn {
+    color: #ff4d4f; /* Red for delete */
+}
+
+.task-actions .delete-btn:hover {
+    color: #c0392b;
+}
+
+.task-actions .edit-btn {
+    color: #007aff; /* Blue for edit */
+}
+
+.task-actions .edit-btn:hover {
+    color: #0056b3;
+}
+
+.task-actions .complete-btn {
+    color: #27ae60; /* Green for mark as complete */
+}
+
+.task-actions .complete-btn:hover {
+    color: #1e8449;
+}
+
+/* Clear All Button */
+button#clear-btn {
+    background: linear-gradient(135deg, #ff9a8b, #fecfef); /* Pink gradient */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button#clear-btn:hover {
+    transform: translateY(-3px) scale(1.05); /* Lift and grow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .todo-container {
+        width: 95%;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    button#add-btn,
+    button#clear-btn {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+}

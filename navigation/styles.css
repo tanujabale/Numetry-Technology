@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f0f8ff;
+}
+body {
+  background-image: url('airplane.avif');
+  background-size: cover; /* Scale the background to cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed during scroll */
+}
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 0;
+  color: #555;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #005f73;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #0a9396;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-container input {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.search-container button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #777;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #005f73;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+/* Content Section Styling */
+section {
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: linear-gradient(135deg, #0a9396, #94d2bd);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f0f8ff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Paragraph */
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0fbfc;
+  margin-bottom: 20px;
+}
+
+/* List Styling */
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #f0f8ff;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+section ul li::before {
+  content: '•';
+  color: #005f73;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

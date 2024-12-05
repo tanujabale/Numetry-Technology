@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>John Doe</h1>
+            <p class="subtitle">Software Developer</p>
+        </header>
+        <nav>
+            <ul>
+                <li><button onclick="showSection('contact')">Contact Details</button></li>
+                <li><button onclick="showSection('education')">Educational Details</button></li>
+                <li><button onclick="showSection('skills')">Technical Skills</button></li>
+                <li><button onclick="showSection('projects')">Projects</button></li>
+                <li><button onclick="showSection('training')">Training & Internship</button></li>
+                <li><button onclick="showSection('personal')">Personal Details</button></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="contact" class="content-section">
+                <h2>Contact Details</h2>
+                <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+                <p>Phone: +123 456 7890</p>
+                <p>LinkedIn: <a href="#">linkedin.com/in/johndoe</a></p>
+            </section>
+            <section id="education" class="content-section hidden">
+                <h2>Educational Details</h2>
+                <p><strong>Bachelor of Technology in Computer Science</strong></p>
+                <p>XYZ University | 2016 - 2020</p>
+                <p><strong>High School</strong></p>
+                <p>ABC School | 2014 - 2016</p>
+            </section>
+            <section id="skills" class="content-section hidden">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Programming Languages: Java, Python, JavaScript</li>
+                    <li>Frameworks: Spring Boot, React, Angular</li>
+                    <li>Databases: MySQL, MongoDB</li>
+                    <li>Tools: Git, Docker, Jenkins</li>
+                </ul>
+            </section>
+            <section id="projects" class="content-section hidden">
+                <h2>Projects</h2>
+                <p><strong>Portfolio Website:</strong> Developed a responsive portfolio showcasing my work using React and TailwindCSS.</p>
+                <p><strong>E-Commerce Platform:</strong> Built an end-to-end e-commerce platform with Node.js and MongoDB.</p>
+            </section>
+            <section id="training" class="content-section hidden">
+                <h2>Training & Internship</h2>
+                <p><strong>Summer Intern, ABC Corp</strong></p>
+                <p>Worked on optimizing backend systems using Spring Boot. (June 2020 - August 2020)</p>
+                <p><strong>Training in Data Science</strong></p>
+                <p>Completed a 3-month certification program in Machine Learning and Data Analytics. (2021)</p>
+            </section>
+            <section id="personal" class="content-section hidden">
+                <h2>Personal Details</h2>
+                <p>Age: 26</p>
+                <p>Gender: Male</p>
+                <p>Hobbies: Coding, Traveling, Photography</p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

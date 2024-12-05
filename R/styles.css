@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background:#a7bdc7;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Header */
+header {
+    background: #44bdb7;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 3px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+/* Navigation Tabs */
+nav {
+    background: #43bcd1;
+    padding: 10px 0;
+    border-bottom: 2px solid #49dcf0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul .tab-button {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul .tab-button:hover,
+nav ul .tab-button.active {
+    background: #3da0b9;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Sections */
+main {
+    padding: 25px 20px;
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.content-section.active {
+    display: block;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2de6b4;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #56cfe1;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+p,
+ul {
+    margin: 15px 0;
+    line-height: 1.8;
+    color: #333333;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 10px;
+    color: #444;
+}
+
+ul li::before {
+    
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Links */
+a {
+    color: #06b7d6;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #11999e;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul .tab-button {
+        margin: 8px 0;
+    }
+}

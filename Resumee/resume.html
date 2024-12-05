@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>John Doe</h1>
+            <p class="subtitle">Full Stack Developer</p>
+        </header>
+        <nav>
+            <ul>
+                <li><button onclick="showSection('contact')">Contact Details</button></li>
+                <li><button onclick="showSection('education')">Education</button></li>
+                <li><button onclick="showSection('projects')">Projects</button></li>
+                <li><button onclick="showSection('personal')">Personal Details</button></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="contact" class="content-section">
+                <h2>Contact Details</h2>
+                <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+                <p>Phone: +123 456 7890</p>
+                <p>Location: City, Country</p>
+            </section>
+            <section id="education" class="content-section hidden">
+                <h2>Education</h2>
+                <p>Bachelor of Science in Computer Science</p>
+                <p>University of Tech | 2012 - 2016</p>
+            </section>
+            <section id="projects" class="content-section hidden">
+                <h2>Projects</h2>
+                <p><strong>Portfolio Website:</strong> Built a responsive portfolio showcasing my work using HTML, CSS, and JavaScript.</p>
+                <p><strong>E-Commerce App:</strong> Developed a full-stack e-commerce application using React and Node.js.</p>
+            </section>
+            <section id="personal" class="content-section hidden">
+                <h2>Personal Details</h2>
+                <p>Age: 29</p>
+                <p>Gender: Male</p>
+                <p>Hobbies: Coding, Traveling, Reading</p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
